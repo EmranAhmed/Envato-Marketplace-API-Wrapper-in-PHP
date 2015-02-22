@@ -400,6 +400,7 @@ class Envato_marketplaces {
 
       $ch = curl_init($url);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($ch,CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 
       $data = curl_exec($ch);
       curl_close($ch);
